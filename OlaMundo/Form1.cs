@@ -132,5 +132,64 @@ namespace OlaMundo
             MessageBox.Show("Valor Investido após um ano: " + valorInvestido.ToString("N2"));
             //teste
         }
+
+        private void btn_multContas_Click(object sender, EventArgs e)
+        {
+            Conta c1 = new Conta();
+            c1.numero = 1;
+            c1.titular = "Caio";
+            c1.saldo = 1000.0;
+
+            Conta c2 = new Conta();
+            c2.saldo = 2;
+            c2.titular = "Maria";
+            c2.saldo = 1500.0;
+        }
+
+        private void btn_saqueProcedural_Click(object sender, EventArgs e)
+        {
+            Conta c1 = new Conta();
+            c1.numero = 1;
+            c1.titular = "Caio";
+            c1.saldo = 1000.0;
+
+            if (c1.Sacar(100))
+            {
+                MessageBox.Show("Saque Realizado");
+            }
+            else
+            {
+                MessageBox.Show("Saque NÃO realizado");
+            }
+
+
+            MessageBox.Show("O Saldo é : " + c1.saldo);
+        }
+
+        private void btn_depositar_Click(object sender, EventArgs e)
+        {
+            Conta conta = new Conta();
+            conta.Depositar(10);
+
+            MessageBox.Show("" + conta.saldo);
+        }
+
+        private void btn_transferir_Click(object sender, EventArgs e)
+        {
+            Conta contaCaio = new Conta();
+            contaCaio.numero = 1;
+            contaCaio.saldo = 1000;
+            contaCaio.titular = "Caio";
+
+            Conta contaMaria = new Conta();
+            contaMaria.numero = 2;
+            contaMaria.saldo = 1500;
+            contaMaria.titular = "Maria";
+
+            contaCaio.Transferir(5000, contaMaria);
+
+            MessageBox.Show("Saldo Caio: " + contaCaio.saldo);
+            MessageBox.Show("Saldo Maria: " + contaMaria.saldo);
+        }
     }
 }
