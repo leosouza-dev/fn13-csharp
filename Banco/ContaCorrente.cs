@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    class ContaPoupanca : Conta
+    class ContaCorrente : Conta
     {
-        //public ContaPoupanca(int numero) : base(numero)
-        //{
-        //}
+        public override void Despositar(double valorOperacao)
+        {
+            base.Despositar(valorOperacao - 0.1);
+        }
 
         public override void Sacar(double valorOperacao)
         {
-            base.Sacar(valorOperacao + 0.1);
-            //this.Saldo -= valorOperacao + 0.1; //protected
+            base.Sacar(valorOperacao + 0.05);
         }
     }
 }

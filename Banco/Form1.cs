@@ -18,14 +18,14 @@ namespace Banco
         }
 
         //private Conta conta1;
-        private ContaPoupanca conta1;
+        private Conta conta1;
         private RelatorioTotalizadorSaldo relatorio;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Cliente cliente1 = new Cliente("Maria");
 
-            conta1 = new ContaPoupanca();
+            conta1 = new ContaCorrente();
             conta1.Numero = 1;
             conta1.Titular = cliente1;
 
@@ -48,10 +48,10 @@ namespace Banco
             //ATUALIZAR O TEXTBOX
             textoSaldo.Text = Convert.ToString(conta1.Saldo);
 
-            //opcinal
-            relatorio = new RelatorioTotalizadorSaldo();
-            relatorio.Totalizador(conta1);
-            MessageBox.Show("Saldo do Banco: " + relatorio.ValorTotalSaldo);
+            //opcional - mudar de lugar ao implementar
+            //relatorio = new RelatorioTotalizadorSaldo();
+            //relatorio.Totalizador(conta1);
+            //MessageBox.Show("Saldo do Banco: " + relatorio.ValorTotalSaldo);
         }
 
         private void BtnSacar_Click(object sender, EventArgs e)

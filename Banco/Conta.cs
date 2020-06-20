@@ -4,16 +4,16 @@ namespace Banco
 {
     class Conta
     {
-        public Conta(int numero)
-        {
-            Numero = numero;
-        }
+        //public Conta(int numero)
+        //{
+        //    Numero = numero;
+        //}
 
         public int Numero { get; set; }
         public double Saldo { get; private set; }
         public Cliente Titular { get; set; }
 
-        public void Despositar(double valorOperacao)
+        public virtual void Despositar(double valorOperacao)
         {
             this.Saldo += valorOperacao;
         }

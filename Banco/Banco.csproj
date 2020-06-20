@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Conta.cs" />
+    <Compile Include="ContaCorrente.cs" />
     <Compile Include="ContaPoupanca.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -38,25 +38,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDepositar = new System.Windows.Forms.Button();
             this.BtnSacar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textoNumero
             // 
-            this.textoNumero.Location = new System.Drawing.Point(154, 26);
+            this.textoNumero.Location = new System.Drawing.Point(156, 24);
             this.textoNumero.Name = "textoNumero";
             this.textoNumero.Size = new System.Drawing.Size(100, 20);
             this.textoNumero.TabIndex = 0;
             // 
             // textoSaldo
             // 
-            this.textoSaldo.Location = new System.Drawing.Point(154, 63);
+            this.textoSaldo.Location = new System.Drawing.Point(156, 61);
             this.textoSaldo.Name = "textoSaldo";
             this.textoSaldo.Size = new System.Drawing.Size(100, 20);
             this.textoSaldo.TabIndex = 1;
             // 
             // textoTitular
             // 
-            this.textoTitular.Location = new System.Drawing.Point(154, 104);
+            this.textoTitular.Location = new System.Drawing.Point(156, 102);
             this.textoTitular.Name = "textoTitular";
             this.textoTitular.Size = new System.Drawing.Size(100, 20);
             this.textoTitular.TabIndex = 2;
@@ -65,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 30);
+            this.label1.Location = new System.Drawing.Point(64, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 3;
@@ -75,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 64);
+            this.label2.Location = new System.Drawing.Point(64, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 4;
@@ -85,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 108);
+            this.label3.Location = new System.Drawing.Point(64, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 5;
@@ -93,7 +95,7 @@
             // 
             // textoValorOperacao
             // 
-            this.textoValorOperacao.Location = new System.Drawing.Point(154, 168);
+            this.textoValorOperacao.Location = new System.Drawing.Point(156, 166);
             this.textoValorOperacao.Name = "textoValorOperacao";
             this.textoValorOperacao.Size = new System.Drawing.Size(100, 20);
             this.textoValorOperacao.TabIndex = 6;
@@ -102,7 +104,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 168);
+            this.label4.Location = new System.Drawing.Point(34, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 16);
             this.label4.TabIndex = 7;
@@ -110,7 +112,7 @@
             // 
             // btnDepositar
             // 
-            this.btnDepositar.Location = new System.Drawing.Point(31, 227);
+            this.btnDepositar.Location = new System.Drawing.Point(33, 225);
             this.btnDepositar.Name = "btnDepositar";
             this.btnDepositar.Size = new System.Drawing.Size(75, 23);
             this.btnDepositar.TabIndex = 8;
@@ -120,7 +122,7 @@
             // 
             // BtnSacar
             // 
-            this.BtnSacar.Location = new System.Drawing.Point(167, 227);
+            this.BtnSacar.Location = new System.Drawing.Point(169, 225);
             this.BtnSacar.Name = "BtnSacar";
             this.BtnSacar.Size = new System.Drawing.Size(75, 23);
             this.BtnSacar.TabIndex = 9;
@@ -128,26 +130,37 @@
             this.BtnSacar.UseVisualStyleBackColor = true;
             this.BtnSacar.Click += new System.EventHandler(this.BtnSacar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.BtnSacar);
+            this.groupBox1.Controls.Add(this.textoNumero);
+            this.groupBox1.Controls.Add(this.btnDepositar);
+            this.groupBox1.Controls.Add(this.textoSaldo);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textoTitular);
+            this.groupBox1.Controls.Add(this.textoValorOperacao);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(277, 263);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Conta";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 427);
-            this.Controls.Add(this.BtnSacar);
-            this.Controls.Add(this.btnDepositar);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textoValorOperacao);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textoTitular);
-            this.Controls.Add(this.textoSaldo);
-            this.Controls.Add(this.textoNumero);
+            this.ClientSize = new System.Drawing.Size(312, 324);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -163,6 +176,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDepositar;
         private System.Windows.Forms.Button BtnSacar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
