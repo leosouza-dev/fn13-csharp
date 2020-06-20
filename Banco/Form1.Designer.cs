@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnNovaConta = new System.Windows.Forms.Button();
+            this.BtnTributo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -204,11 +205,22 @@
             this.BtnNovaConta.UseVisualStyleBackColor = true;
             this.BtnNovaConta.Click += new System.EventHandler(this.BtnNovaConta_Click);
             // 
+            // BtnTributo
+            // 
+            this.BtnTributo.Location = new System.Drawing.Point(217, 357);
+            this.BtnTributo.Name = "BtnTributo";
+            this.BtnTributo.Size = new System.Drawing.Size(75, 23);
+            this.BtnTributo.TabIndex = 14;
+            this.BtnTributo.Text = "Tributo";
+            this.BtnTributo.UseVisualStyleBackColor = true;
+            this.BtnTributo.Click += new System.EventHandler(this.BtnTributo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 392);
+            this.Controls.Add(this.BtnTributo);
             this.Controls.Add(this.BtnNovaConta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
@@ -243,6 +255,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnNovaConta;
+        private System.Windows.Forms.Button BtnTributo;
     }
 }
 

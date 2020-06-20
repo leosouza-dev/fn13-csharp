@@ -25,17 +25,17 @@ namespace Banco
             // criando array de conta
             this.contas = new Conta[100];
 
-            Conta c1 = new Conta();
+            ContaInvestimento c1 = new ContaInvestimento();
             c1.Titular = new Cliente("Maria");
             c1.Numero = 1;
             this.AdicionaConta(c1);
 
-            Conta c2 = new Conta();
+            ContaPoupanca c2 = new ContaPoupanca();
             c2.Titular = new Cliente("Caio");
             c2.Numero = 2;
             this.AdicionaConta(c2);
 
-            Conta c3 = new Conta();
+            ContaCorrente c3 = new ContaCorrente();
             c3.Titular = new Cliente("José");
             c3.Numero = 3;
             this.AdicionaConta(c3);
@@ -126,6 +126,24 @@ namespace Banco
         {
             FormCadastroConta formularioDeCadastro = new FormCadastroConta(this);
             formularioDeCadastro.ShowDialog();
+        }
+
+        private void BtnTributo_Click(object sender, EventArgs e)
+        {
+            var sv = new SeguroDeVida();
+
+            var ci = new ContaInvestimento();
+            ci.Despositar(1000);
+
+            var cp = new ContaPoupanca();
+            cp.Despositar(2000);
+
+            var t = new TotalizadorDeTributos();
+            t.Acumular(sv);
+            t.Acumular(ci);
+            t.Acumular(cp);
+
+            MessageBox.Show("Tributo: " + t.Total);
         }
     }
 }

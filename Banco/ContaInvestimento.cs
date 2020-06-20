@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    public class ContaPoupanca : Conta, ITributavel
+    public class ContaInvestimento : Conta, ITributavel 
     {
-
         public override void Despositar(double valorOperacao)
         {
-            this.Saldo += valorOperacao - 0.08;
+            this.Saldo += valorOperacao;
         }
 
         public override void Sacar(double valorOperacao)
         {
-            this.Saldo -= valorOperacao + 0.1; //protected
+            this.Saldo -= valorOperacao;
         }
 
         public double CalcularTributo()
         {
-            return this.Saldo * 0.02;
+            return this.Saldo * 0.01;
         }
     }
 }

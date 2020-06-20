@@ -10,12 +10,13 @@ namespace Banco
     {
         public override void Despositar(double valorOperacao)
         {
-            base.Despositar(valorOperacao - 0.1);
+            //base.Despositar(valorOperacao - 0.1);
+            this.Saldo += valorOperacao - 0.1;
         }
 
         public override void Sacar(double valorOperacao)
         {
-            base.Sacar(valorOperacao + 0.05);
+            this.Saldo -= valorOperacao + 0.05;
         }
     }
 }
