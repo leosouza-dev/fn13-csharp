@@ -17,53 +17,82 @@ namespace Banco
             InitializeComponent();
         }
 
-        //private Conta conta1;
-        private Conta conta1;
-        private RelatorioTotalizadorSaldo relatorio;
+        private Conta[] contas;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Cliente cliente1 = new Cliente("Maria");
+            // criando array de conta
+            this.contas = new Conta[3];
 
-            conta1 = new ContaCorrente();
-            conta1.Numero = 1;
-            conta1.Titular = cliente1;
+            this.contas[0] = new Conta();
+            this.contas[0].Numero = 1;
+            this.contas[0].Titular = new Cliente("Maria");
 
-            //textoTitular.Text = cliente1.Nome;
-            textoTitular.Text = conta1.Titular.Nome;
-            textoSaldo.Text = Convert.ToString(conta1.Saldo);
-            textoNumero.Text = Convert.ToString(conta1.Numero);
+            this.contas[1] = new ContaCorrente();
+            this.contas[1].Numero = 2;
+            this.contas[1].Titular = new Cliente("Caio");
 
+            this.contas[2] = new ContaPoupanca();
+            this.contas[2].Numero = 3;
+            this.contas[2].Titular = new Cliente("José");
+
+            foreach (var conta in contas)
+            {
+                comboContas.Items.Add("titular: " + conta.Titular.Nome);
+            }
+
+        }
+
+        private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // encontrando o indice
+            int indice = comboContas.SelectedIndex;
+
+            // encontra a conta desejada
+            Conta contaSelecionada = contas[indice];
+
+            // exibe os dados
+            textoTitular.Text = contaSelecionada.Titular.Nome;
+            textoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
+            textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
 
         }
 
         private void btnDepositar_Click(object sender, EventArgs e)
         {
-            //recuperar o valor de operação
-            string valorDigitado = textoValorOperacao.Text;
-            double valorOperacao = Convert.ToDouble(valorDigitado);
+            // encontra o indice
+            int indice = comboContas.SelectedIndex;
 
-            conta1.Despositar(valorOperacao);
+            // encontra a conta
+            Conta selecionada = this.contas[indice];
 
-            //ATUALIZAR O TEXTBOX
-            textoSaldo.Text = Convert.ToString(conta1.Saldo);
+            // encontra o valor digitado
+            double valor = Convert.ToDouble(textoValorOperacao.Text);
 
-            //opcional - mudar de lugar ao implementar
-            //relatorio = new RelatorioTotalizadorSaldo();
-            //relatorio.Totalizador(conta1);
-            //MessageBox.Show("Saldo do Banco: " + relatorio.ValorTotalSaldo);
+            // deposita
+            selecionada.Despositar(valor);
+
+            // atualiza saldo
+            textoSaldo.Text = Convert.ToString(selecionada.Saldo);
         }
 
         private void BtnSacar_Click(object sender, EventArgs e)
         {
-            var valorDigitado = textoValorOperacao.Text;
+            // encontra o indice
+            int indice = comboContas.SelectedIndex;
 
-            double valorOperacao = Convert.ToDouble(valorDigitado);
+            // encontra a conta
+            Conta selecionada = this.contas[indice];
 
-            conta1.Sacar(valorOperacao);
+            // encontra o valor digitado
+            double valor = Convert.ToDouble(textoValorOperacao.Text);
 
-            //ATUALIZAR O TEXTBOX
-            textoSaldo.Text = Convert.ToString(conta1.Saldo);
+            // deposita
+            selecionada.Sacar(valor);
+
+            // atualiza saldo
+            textoSaldo.Text = Convert.ToString(selecionada.Saldo);
         }
+
     }
 }

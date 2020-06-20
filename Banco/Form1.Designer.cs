@@ -39,6 +39,7 @@
             this.btnDepositar = new System.Windows.Forms.Button();
             this.BtnSacar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboContas = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,18 +143,28 @@
             this.groupBox1.Controls.Add(this.textoValorOperacao);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(277, 263);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta";
             // 
+            // comboContas
+            // 
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(101, 30);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(188, 21);
+            this.comboContas.TabIndex = 10;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 324);
+            this.ClientSize = new System.Drawing.Size(312, 376);
+            this.Controls.Add(this.comboContas);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -177,6 +188,7 @@
         private System.Windows.Forms.Button btnDepositar;
         private System.Windows.Forms.Button BtnSacar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboContas;
     }
 }
 
