@@ -2,7 +2,7 @@
 
 namespace Banco
 {
-    class Conta
+    public class Conta
     {
         //public Conta(int numero)
         //{

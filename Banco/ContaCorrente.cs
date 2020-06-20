@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    class ContaCorrente : Conta
+    public class ContaCorrente : Conta
     {
         public override void Despositar(double valorOperacao)
         {

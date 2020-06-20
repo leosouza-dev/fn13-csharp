@@ -1,6 +1,6 @@
 ﻿namespace Banco
 {
-    class Cliente
+    public class Cliente
     {
         public Cliente(string nome)
         {

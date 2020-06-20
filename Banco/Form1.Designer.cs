@@ -42,6 +42,8 @@
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.BtnNovaConta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -183,11 +185,32 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Conta";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "label6";
+            // 
+            // BtnNovaConta
+            // 
+            this.BtnNovaConta.Location = new System.Drawing.Point(15, 357);
+            this.BtnNovaConta.Name = "BtnNovaConta";
+            this.BtnNovaConta.Size = new System.Drawing.Size(75, 23);
+            this.BtnNovaConta.TabIndex = 13;
+            this.BtnNovaConta.Text = "Nova Conta";
+            this.BtnNovaConta.UseVisualStyleBackColor = true;
+            this.BtnNovaConta.Click += new System.EventHandler(this.BtnNovaConta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 361);
+            this.ClientSize = new System.Drawing.Size(308, 392);
+            this.Controls.Add(this.BtnNovaConta);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -198,6 +221,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -217,6 +241,8 @@
         private System.Windows.Forms.ComboBox comboContas;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnNovaConta;
     }
 }
 

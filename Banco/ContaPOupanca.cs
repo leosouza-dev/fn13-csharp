@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    class ContaPoupanca : Conta
+    public class ContaPoupanca : Conta
     {
         //public ContaPoupanca(int numero) : base(numero)
         //{
