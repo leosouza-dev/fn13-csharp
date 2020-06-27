@@ -140,9 +140,12 @@ namespace Banco
 
             var t = new TotalizadorDeTributos();
             t.Acumular(sv);
-            t.Acumular(ci);
-            t.Acumular(cp);
+            MessageBox.Show("Tributo: " + t.Total);
 
+            t.Acumular(ci);
+            MessageBox.Show("Tributo: " + t.Total);
+
+            t.Acumular(cp);
             MessageBox.Show("Tributo: " + t.Total);
         }
     }

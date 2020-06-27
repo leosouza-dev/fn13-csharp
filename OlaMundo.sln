@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerceiroDia", "TerceiroDia\TerceiroDia.csproj", "{B6384BC2-D155-4973-BA1D-B5C9E062645A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartoDia", "QuartoDia\QuartoDia.csproj", "{5C157C08-9AB7-479C-950E-39D9753CD8C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B6384BC2-D155-4973-BA1D-B5C9E062645A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6384BC2-D155-4973-BA1D-B5C9E062645A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6384BC2-D155-4973-BA1D-B5C9E062645A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C157C08-9AB7-479C-950E-39D9753CD8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C157C08-9AB7-479C-950E-39D9753CD8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C157C08-9AB7-479C-950E-39D9753CD8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C157C08-9AB7-479C-950E-39D9753CD8C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
