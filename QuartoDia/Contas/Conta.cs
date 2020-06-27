@@ -25,6 +25,23 @@ namespace QuartoDia
             public int Numero { get; set; }
             public double Saldo { get; set; }
 
+            public override bool Equals(object obj)
+            {
+                if(!(obj is Conta))
+                {
+                    return false;
+                }
+
+                Conta outraConta = (Conta)obj;
+                return this.Numero == outraConta.Numero;
+            }
+
+            public override string ToString()
+            {
+                return $"Titular: {this.Titular.Nome}";
+                //return "Titular: " + this.Titular.Nome;
+            }
+
             // métodos
             public static int RetornarProximoNumeroDaCOnta()
             {
@@ -45,6 +62,8 @@ namespace QuartoDia
                 this.Saldo -= valor;
 
             }
+
+
         }
 
     }
