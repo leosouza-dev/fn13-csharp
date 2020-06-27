@@ -126,5 +126,127 @@ namespace QuartoDia
 
             MessageBox.Show(c5.ToString());
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            List<Conta> contas = new List<Conta>();
+
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            contas.Add(conta1);
+            contas.Add(conta1);
+            contas.Add(conta1);
+            contas.Add(conta1);
+            contas.Add(conta1);
+            contas.Add(conta2);
+            contas.Add(conta3);
+
+            foreach (var conta in contas)
+            {
+                MessageBox.Show("Numero: " + conta.Numero);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            List<Conta> contas = new List<Conta>()
+            {
+                conta1,
+                conta2,
+                conta3
+            };
+
+            contas.Add(new Conta(4));
+
+            foreach (var conta in contas)
+            {
+                MessageBox.Show("Numero: " + conta.Numero);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            List<Conta> contas = new List<Conta>()
+            {
+                conta1,
+                conta2,
+                conta3
+            };
+
+            MessageBox.Show("Numero: " + contas[1].Numero);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            List<Conta> contas = new List<Conta>()
+            {
+                conta1,
+                conta2,
+                conta3
+            };
+
+            //contas.Remove(conta3);
+            contas.RemoveAt(2);
+
+            foreach (var conta in contas)
+            {
+                MessageBox.Show("Numero: " + conta.Numero);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            var conta4 = new Conta(4);
+
+            List<Conta> contas = new List<Conta>()
+            {
+                conta1,
+                conta2,
+                conta3
+            };
+
+            if (contas.Contains(conta4))
+            {
+                MessageBox.Show("Contem");
+            }
+            else
+            {
+                MessageBox.Show("Não Contem");
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta(1);
+            var conta2 = new Conta(2);
+            var conta3 = new Conta(3);
+
+            List<Conta> contas = new List<Conta>()
+            {
+                conta1,
+                conta2,
+                conta3
+            };
+
+            MessageBox.Show($"A lista possui {contas.Count} contas");
+        }
     }
 }
