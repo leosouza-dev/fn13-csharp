@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuintoDia.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -402,6 +403,139 @@ namespace QuintoDia
             {
                 gravador.Write("Gravando mensagem durante a aula de sábado! FN13");
             }
+        }
+
+        // criando e imprimindo uma string
+        private void button21_Click(object sender, EventArgs e)
+        {
+            string mensagem = "Sabadou na Caelum!";
+            MessageBox.Show(mensagem);
+        }
+
+        // concatenação de strings
+        private void button22_Click(object sender, EventArgs e)
+        {
+            string msg = "Sabadou" + " na" + " caelum";
+            msg += "!";
+            MessageBox.Show(msg);
+        }
+
+        // concatenação com int
+        private void button23_Click(object sender, EventArgs e)
+        {
+            int a = 51;
+            string mensagem = a + " uma boa ideia";
+
+            MessageBox.Show(mensagem);
+        }
+
+
+        // interpolação
+        private void button24_Click(object sender, EventArgs e)
+        {
+            int a = 51;
+            string mensagem = $"{a} uma boa ideia";
+
+            MessageBox.Show(mensagem);
+        }
+
+        // String.Format
+        private void button25_Click(object sender, EventArgs e)
+        {
+            string nome = "Caio";
+            int idade = 25;
+            string mensagem = string.Format("Olá {0}, sua idade é {1}", nome, idade);
+
+            MessageBox.Show(mensagem);
+        }
+
+        // split
+        private void button26_Click(object sender, EventArgs e)
+        {
+            string texto = "guilherme silveira, 42, São Paulo, Brasil";
+            string[] textoSeparado = texto.Split(',');
+
+            foreach (var item in textoSeparado)
+            {
+                MessageBox.Show(item);
+            }
+        }
+
+        // string é imutavel
+        private void button27_Click(object sender, EventArgs e)
+        {
+            string curso = "fn13";
+            curso.ToUpper();
+            MessageBox.Show(curso);
+        }
+
+        // ToUpper
+        private void button28_Click(object sender, EventArgs e)
+        {
+            string curso = "fn13";
+            string maiuscula = curso.ToUpper();
+            MessageBox.Show(maiuscula);
+        }
+
+        // replace
+        private void button29_Click(object sender, EventArgs e)
+        {
+            string curso = "fn13";
+            curso = curso.ToUpper();
+            curso = curso.Replace("1", "2");
+            MessageBox.Show(curso);
+        }
+
+        // quebrando em partes menores - substring
+        private void button30_Click(object sender, EventArgs e)
+        {
+            string nomeCompleto = "guilherme silveira";
+            string nome = nomeCompleto.Substring(0, 9);
+            MessageBox.Show(nome);
+        }
+
+        // indexOf
+        private void button31_Click(object sender, EventArgs e)
+        {
+            string nomeCompleto = "guilherme silveira";
+            int posicaoDoEspaco = nomeCompleto.IndexOf(" ");
+            MessageBox.Show(posicaoDoEspaco.ToString());
+        }
+
+        // concatenando métodos
+        private void button32_Click(object sender, EventArgs e)
+        {
+            string curso = "fn13";
+            curso = curso.ToUpper().Replace("1", "2");
+            MessageBox.Show(curso);
+        }
+
+        // IndexOf + substring
+        private void button33_Click(object sender, EventArgs e)
+        {
+            string nomeCompleto = "guilherme silveira";
+            int posicaoDoS = nomeCompleto.IndexOf("s");
+            string segundoNome = nomeCompleto.Substring(posicaoDoS);
+
+            MessageBox.Show(segundoNome);
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            string banco = "banco";
+            string bancoNoPLural = StringUtils.Pluralize(banco);
+            //string bancoNoPLural = banco.Pluralize();
+
+
+            MessageBox.Show(bancoNoPLural);
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            string banco = "banco";
+            string bancoNoPLural = banco.Pluralize();
+
+            MessageBox.Show(bancoNoPLural);
         }
     }
 }
