@@ -112,5 +112,54 @@ namespace QuintoDia
                 MessageBox.Show(item);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            List<Conta> contas = new List<Conta>
+            {
+                new Conta("Caio"),
+                new Conta("Leonardo"),
+                new Conta("José"),
+                new Conta("Antonio"),
+                new Conta("Darci"),
+            };
+
+            string titularDaBusca = "Darci";
+            Conta contaEsperada = null;
+
+            foreach (var conta in contas)
+            {
+                if (conta.Titular.Equals(titularDaBusca))
+                {
+                    contaEsperada = conta;
+                    break;
+                }
+            }
+
+            MessageBox.Show("Resultado: " + contaEsperada.Titular);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var conta1 = new Conta("Maria");
+            var conta2 = new Conta("José");
+            var conta3 = new Conta("Pedro");
+
+            //Dictinary<key, Value>
+            Dictionary<string, Conta> dicionarioDeConta = new Dictionary<string, Conta>();
+            dicionarioDeConta.Add(conta1.Titular, conta1);
+            dicionarioDeConta.Add(conta2.Titular, conta2);
+            dicionarioDeConta.Add(conta3.Titular, conta3);
+
+
+            Conta contaEsperada = dicionarioDeConta["Pedro"];
+            MessageBox.Show("Resultado: " + contaEsperada.Titular);
+
+            foreach (var conta in dicionarioDeConta)
+            {
+                MessageBox.Show("A chave é: " + conta.Key);
+                MessageBox.Show("O valor é: " + conta.Value);
+            }
+        }
     }
 }
