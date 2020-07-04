@@ -13,6 +13,12 @@ namespace QuintoDia
             Titular = titular;
         }
 
+        public Conta(string titular, double saldo)
+        {
+            Titular = titular;
+            Saldo = saldo;
+        }
+
         public int Numero { get; set; }
         public string Titular { get; set; }
         public double Saldo { get; set; }
